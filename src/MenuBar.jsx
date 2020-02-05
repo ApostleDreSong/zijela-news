@@ -4,12 +4,11 @@ import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
-import { Container, Grid, Paper } from '@material-ui/core';
+import { Container, Paper } from '@material-ui/core';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
 import RenderPaper from './RenderPaper';
 import axios from 'axios';
-import AdSense from 'react-adsense';
 
 function TabPanel(props) {
     const { children, value, index, ...other } = props;
@@ -108,11 +107,6 @@ export default function SimpleTabs() {
                 </Tabs>
             </AppBar>
             <Container className={classes.content} maxWidth="xl">
-                <Grid container>
-                    <Grid item sm={12} md={4}>
-
-                    </Grid>
-                    <Grid item sm={12} md={8}>
                         <Paper>
                             {
                                 papers.length ?
@@ -125,8 +119,6 @@ export default function SimpleTabs() {
                                     : null
                             }
                         </Paper>
-                    </Grid>
-                </Grid>
             </Container>
         </div>
     );

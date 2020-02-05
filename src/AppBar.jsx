@@ -18,7 +18,6 @@ import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import MenuBookIcon from '@material-ui/icons/MenuBook';
 import PersonIcon from '@material-ui/icons/Person';
-import AdSense from 'react-adsense';
 
 import { withRouter } from 'react-router-dom';
 

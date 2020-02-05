@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Divider } from '@material-ui/core';
 import he from 'he';
-import AdSense from 'react-adsense';
 
 const styles = {
     title: {
