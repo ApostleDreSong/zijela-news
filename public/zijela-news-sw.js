@@ -5,16 +5,15 @@ var dynamicURLS = 'zijela-news-dynamic';
 var urls = [
 	'/',
 	'/manifest.json',
-	'/zijela-logo.png',
-	'/static/js/bundle.js',
-	'/static/js/0.chunk.js',
-	'/static/js/main.chunk.js',
+	'/zijela-logo.png'
 ];
 
 self.addEventListener('install', event => {
 	event.waitUntil(
 		caches.open(staticURLS).then(cache => {
 			return cache.addAll(urls);
+		}).catch(err => {
+			console.log(err);
 		})
 	);
 });
@@ -25,6 +24,7 @@ self.addEventListener('fetch', function(event) {
 			.then(res => {
 				let responseClone = res.clone();
 				caches.open(dynamicURLS).then(function(cache) {
+					if (!/^https?:$/i.test(new URL(event.request.url).protocol)) return;
 					cache.put(event.request, responseClone);
 				});
 
