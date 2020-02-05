@@ -52,15 +52,7 @@ function RenderPaper(props) {
         <p>
             These news highlights are gotten from {url}. To read more stories from {paperName}, <a href={url} target="_blank" rel="noopener noreferrer">click here</a>
         </p>
-        <div style={{ minWidth: "250px" }}>
-            <AdSense.Google
-                style={{ display: 'block' }}
-                client="ca-pub-8129016254318897"
-                slot="7763050933"
-                format="auto"
-                layoutKey="-gw-1+2a-9x+5c"
-                responsive="true" />
-        </div>
+
 
     </div>
 }

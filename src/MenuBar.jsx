@@ -110,14 +110,7 @@ export default function SimpleTabs() {
             <Container className={classes.content} maxWidth="xl">
                 <Grid container>
                     <Grid item sm={12} md={4}>
-                        <div style={{ minWidth: "250px" }}>
-                            <AdSense.Google
-                                style={{ display: 'block' }}
-                                client="ca-pub-8129016254318897"
-                                slot="7763050933"
-                                format="auto"
-                                responsive="true" />
-                        </div>
+
                     </Grid>
                     <Grid item sm={12} md={8}>
                         <Paper>
