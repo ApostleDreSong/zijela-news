@@ -53,7 +53,7 @@ function RenderPaper(props) {
             <PaperAccordion
               title={he.decode(news["title"].rendered)}
               url={news["guid"]["rendered"]}
-              content={he.decode(news["content"].rendered)}
+              content={he.decode(news["content"].rendered.replace(/<img[^>]*>/g,`Visit <a href=${news["guid"]["rendered"]}>${paperName}</a> to view this image`))}
             />
             <div style={styles.shareCont}>
               <Share
