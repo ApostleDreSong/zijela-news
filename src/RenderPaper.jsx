@@ -4,6 +4,8 @@ import { Divider } from "@material-ui/core";
 import he from "he";
 import Share from "./Share";
 import PaperAccordion from "./PaperAccordion";
+import LoaderModal from "./LoaderModal"
+
 
 const styles = {
   rel: {
@@ -23,10 +25,12 @@ const styles = {
 
 function RenderPaper(props) {
   var [content, setContent] = useState([]);
+  var [loading, setLoading] = useState(false);
   const { url, paperName } = props;
   const zijelaUrl = "http://news.zijela.com";
 
   useEffect(() => {
+    setLoading(true);
     let mounted = true;
     axios
       .get(`${url}/wp-json/wp/v2/posts?per_page=30`, {
@@ -36,8 +40,10 @@ function RenderPaper(props) {
         if (mounted) {
           setContent(response.data);
         }
+        setLoading(false);
       })
       .catch(function(error) {
+        setLoading(false);
         console.log(error);
       });
     return () => {
@@ -46,6 +52,7 @@ function RenderPaper(props) {
   }, [url, content.length]);
   return (
     <div>
+      <LoaderModal loading={loading}/>
       <Divider />
       {content.map((news, index) => (
         <div key={index}>
