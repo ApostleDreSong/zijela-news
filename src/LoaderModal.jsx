@@ -21,9 +21,6 @@ function getModalStyle() {
 const useStyles = makeStyles(theme => ({
   paper: {
     position: "absolute",
-    backgroundColor: "rgba(0,0,0,0)",
-    border: "none",
-    padding: theme.spacing(2, 4, 3),
     textAlign: "center"
   }
 }));
