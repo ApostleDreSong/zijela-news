@@ -43,7 +43,6 @@ export default function SimpleModal(props) {
       >
         <div style={modalStyle} className={classes.paper}>
           <Loader />
-          <SimpleModal />
         </div>
       </Modal>
     </div>

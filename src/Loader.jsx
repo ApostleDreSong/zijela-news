@@ -1,14 +1,14 @@
-import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
-import LinearProgress from '@material-ui/core/LinearProgress';
+import React from "react";
+import { makeStyles } from "@material-ui/core/styles";
+import CircularProgress from "@material-ui/core/CircularProgress";
 
 const useStyles = makeStyles(theme => ({
   root: {
-    flexGrow: 1,
+    flexGrow: 1
   },
   margin: {
-    margin: theme.spacing(1),
-  },
+    margin: theme.spacing(1)
+  }
 }));
 
 export default function CustomizedProgressBars() {
@@ -16,9 +16,8 @@ export default function CustomizedProgressBars() {
 
   return (
     <div className={classes.root}>
-      <LinearProgress className={classes.margin} />
-      <LinearProgress className={classes.margin} />
-      <LinearProgress className={classes.margin} />
+      <CircularProgress />
+      <CircularProgress color="secondary" />
     </div>
   );
 }
