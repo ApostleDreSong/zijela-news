@@ -21,11 +21,10 @@ function getModalStyle() {
 const useStyles = makeStyles(theme => ({
   paper: {
     position: "absolute",
-    width: 400,
-    backgroundColor: theme.palette.background.paper,
-    border: "2px solid #000",
-    boxShadow: theme.shadows[5],
-    padding: theme.spacing(2, 4, 3)
+    backgroundColor: "rgba(0,0,0,0)",
+    border: "none",
+    padding: theme.spacing(2, 4, 3),
+    textAlign: "center"
   }
 }));
 
@@ -39,7 +38,8 @@ export default function SimpleModal(props) {
       <Modal
         aria-labelledby="simple-modal-title"
         aria-describedby="simple-modal-description"
-        open={props.loading?props.loading:false}
+        // open={props.loading?props.loading:false}
+        open={true}
       >
         <div style={modalStyle} className={classes.paper}>
           <Loader />
