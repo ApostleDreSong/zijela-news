@@ -38,8 +38,7 @@ export default function SimpleModal(props) {
       <Modal
         aria-labelledby="simple-modal-title"
         aria-describedby="simple-modal-description"
-        // open={props.loading?props.loading:false}
-        open={true}
+        open={props.loading?props.loading:false}
       >
         <div style={modalStyle} className={classes.paper}>
           <Loader />
